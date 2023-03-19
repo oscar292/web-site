@@ -12,39 +12,36 @@ hbs.registerPartials(__dirname + '/views/partials');
 //midelwares
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.render('home', {
-        nombre: 'Oscar',
-        titulo: 'Bienvenido Usuario'
-    })
-});
+// app.get('/', (req, res) => {
+//     res.render('home', {
+//         nombre: 'Oscar',
+//         titulo: 'Bienvenido Usuario'
+//     })
+// });
 
-app.get('/generic', (req, res) => {
-    res.render('generic', {
-        nombre: 'Oscar',
-        titulo: 'Bienvenido Usuario'
-    })
-});
+// app.get('/generic', (req, res) => {
+//     res.render('generic', {
+//         nombre: 'Oscar',
+//         titulo: 'Bienvenido Usuario'
+//     })
+// });
 
-app.get('/elements', (req, res) => {
-    res.render('elements', {
-        nombre: 'Oscar',
-        titulo: 'Bienvenido Usuario'
-    })
-});
+// app.get('/elements', (req, res) => {
+//     res.render('elements', {
+//         nombre: 'Oscar',
+//         titulo: 'Bienvenido Usuario'
+//     })
+// });
 
-app.get('/index', (req, res) => {
-    res.render('home', {
-        nombre: 'Oscar',
-        titulo: 'Bienvenido Usuario'
-    })
-});
+// app.get('/index', (req, res) => {
+//     res.render('home', {
+//         nombre: 'Oscar',
+//         titulo: 'Bienvenido Usuario'
+//     })
+// });
 
 app.get('*', (req, res) => {
-    res.render('home', {
-        nombre: 'Oscar',
-        titulo: 'Bienvenido Usuario'
-    })
+    res.sendFile(__dirname + '/public/index.html')
 });
 
 app.listen(port, () => {
